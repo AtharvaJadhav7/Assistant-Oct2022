@@ -92,9 +92,10 @@ if __name__ == "__main__":
             strTime = datetime.datetime.now().strftime("%H:%M:%S")
             speak(f"Sir, the time is {strTime}")
 
-        elif 'what' in query & 'time' in query:
-            strTime = datetime.datetime.now().strftime("%H:%M:%S")
-            speak(f"Sir, the time is {strTime}")
+        elif 'time' in query:
+            if 'what' in query:
+                strTime = datetime.datetime.now().strftime("%H:%M:%S")
+                speak(f"Sir, the time is {strTime}")
 
 
 
