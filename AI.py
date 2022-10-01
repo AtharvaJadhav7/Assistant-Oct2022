@@ -63,13 +63,6 @@ def takeCommand():
         return "None"
     return query
 
-
-
-
-    
-      
-    
-
 if __name__ == "__main__":
     speak("Hi! This is zira.")
     wishMe() 
@@ -96,6 +89,10 @@ if __name__ == "__main__":
             webbrowser.open(query)
 
         elif 'current time' in query:
+            strTime = datetime.datetime.now().strftime("%H:%M:%S")
+            speak(f"Sir, the time is {strTime}")
+
+        elif 'what' in query & 'time' in query:
             strTime = datetime.datetime.now().strftime("%H:%M:%S")
             speak(f"Sir, the time is {strTime}")
 
